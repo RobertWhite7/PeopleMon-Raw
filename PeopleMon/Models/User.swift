@@ -124,17 +124,17 @@ class User : NetworkModel {
     func path() -> String {
         switch requestType {
         case .Nearby:
-            return "/v1/User/Nearby"
+            return "/User/Nearby"
         case .CheckIn:
-            return "/v1/User/CheckIn"
+            return "/User/CheckIn"
         case .Catch:
-            return "/v1/User/Catch"
+            return "/User/Catch"
         case .Caught:
-            return "/v1/User/Caught"
+            return "/User/Caught"
         case .Conversations:
-            return "/v1/User/Conversations"
+            return "/User/Conversations"
         case .Conversation:
-            return "/v1/User/Conversation"
+            return "/User/Conversation"
         }
     }
     

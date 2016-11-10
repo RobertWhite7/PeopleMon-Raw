@@ -139,7 +139,7 @@ class Account : NetworkModel {
             params[Constants.Account.NewPassword] = NewPassword as AnyObject?
         case .register:
             params[Constants.Account.ApiKey] = ApiKey as AnyObject?
-        default:
+       
             break
         }
         
