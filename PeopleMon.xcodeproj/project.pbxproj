@@ -24,7 +24,6 @@
 		26F765451DD0DAEF00B7B264 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F765441DD0DAEF00B7B264 /* Test.swift */; };
 		26F765471DD0DF4500B7B264 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F765461DD0DF4500B7B264 /* Account.swift */; };
 		26F765491DD0DF6C00B7B264 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F765481DD0DF6C00B7B264 /* User.swift */; };
-		26F7654D1DD0DF8F00B7B264 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F7654C1DD0DF8F00B7B264 /* Auth.swift */; };
 		26F765501DD125DA00B7B264 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F7654F1DD125DA00B7B264 /* MapKit.framework */; };
 		7CE3805C4C51387DB5CEEE96 /* Pods_PeopleMon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 435D3C1C16A954592E90E8C1 /* Pods_PeopleMon.framework */; };
 /* End PBXBuildFile section */
@@ -49,7 +48,6 @@
 		26F765441DD0DAEF00B7B264 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Test.swift; path = Models/Test.swift; sourceTree = "<group>"; };
 		26F765461DD0DF4500B7B264 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Models/Account.swift; sourceTree = "<group>"; };
 		26F765481DD0DF6C00B7B264 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
-		26F7654C1DD0DF8F00B7B264 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Auth.swift; path = Models/Auth.swift; sourceTree = "<group>"; };
 		26F7654E1DD125D200B7B264 /* PeopleMon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PeopleMon.entitlements; sourceTree = "<group>"; };
 		26F7654F1DD125DA00B7B264 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		435D3C1C16A954592E90E8C1 /* Pods_PeopleMon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleMon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,7 +147,6 @@
 			children = (
 				26F765441DD0DAEF00B7B264 /* Test.swift */,
 				26F765481DD0DF6C00B7B264 /* User.swift */,
-				26F7654C1DD0DF8F00B7B264 /* Auth.swift */,
 				26F765461DD0DF4500B7B264 /* Account.swift */,
 			);
 			name = Models;
@@ -317,7 +314,6 @@
 				26F765401DD0D47E00B7B264 /* Utils.swift in Sources */,
 				26F765161DD0CBEC00B7B264 /* AppDelegate.swift in Sources */,
 				26F7653C1DD0D40500B7B264 /* WebServices.swift in Sources */,
-				26F7654D1DD0DF8F00B7B264 /* Auth.swift in Sources */,
 				26F765301DD0D24600B7B264 /* RegisterViewController.swift in Sources */,
 				26F7653E1DD0D45C00B7B264 /* Constants.swift in Sources */,
 			);

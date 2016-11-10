@@ -10,18 +10,18 @@ import Foundation
 import UIKit
 
 struct Constants {
-    // Step 16: Add monthDayYear
-    static let monthDayYear = "MM/dd/yyyy"
+    
+    
     
     // Step 7: Add keychain strings
     public static let keychainIdentifier = "EFABKeychain"
     public static let authTokenExpireDate = "authTokenExpireDate"
     public static let authToken = "authToken"
     
-    // Step 19: Add Notification constant
-    static let newExpensesFound = "NewExpensesFound"
+    static let apiKey = "iOS301november2016"
     
-    // Step 3: Create Test Model Constants
+    
+    
     // MARK: Test Model
     struct Test {
         static let userId = "userId"
@@ -37,30 +37,7 @@ struct Constants {
         static let processingError = "There was an error processing the response"
     }
     
-    // Step 9: BudgetUser Constants
-    struct BudgetUser {
-        static let id = "id"
-        static let email = "email"
-        static let username = "username"
-        static let password = "password"
-        static let token = "token"
-        static let expirationDate = "expiration"
-    }
-    
-    // Step 10: Category Constants
-    struct Category {
-        static let id = "id"
-        static let name = "name"
-        static let categoryInfo = "category_info"
-        static let startDate = "start_date"
-        static let endDate = "end_date"
-        static let user = "user"
-        static let amount = "amount"
-        
-        static let month = "month"
-        static let day = "day"
-        static let year = "year"
-    }
+
     
     struct Account {
         static let Id = "Id"
@@ -107,20 +84,7 @@ struct Constants {
         static let Messages = "Messages"
     }
     
-    // Step 11: Expense Constants
-    struct Expense {
-        static let id = "id"
-        static let amount = "amount"
-        static let category = "category"
-        static let date = "date"
-        static let note = "note"
-        static let categoryId = "categoryId"
-        static let categoryName = "categoryName"
-        
-        // Step 19: Add month/year
-        static let month = "month"
-        static let year = "year"
-    }
+
 }
 
 // MARK: - Colors

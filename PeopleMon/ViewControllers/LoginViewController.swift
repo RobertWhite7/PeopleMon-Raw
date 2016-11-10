@@ -10,9 +10,11 @@ import UIKit
 import MBProgressHUD
 
 class LoginViewController: UIViewController {
-    
     @IBOutlet weak var usernameTextField: UITextField!
+
+    
     @IBOutlet weak var passwordTextField: UITextField!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +48,7 @@ class LoginViewController: UIViewController {
         // Going to go ahead with the register
         MBProgressHUD.showAdded(to: view, animated: true)
         
-  /*      let user = User(username: username, password: password)
+     /*   let user = User(username: username, password: password)
         
         UserStore.shared.register(user) { (success, error) in
             MBProgressHUD.hide(for: self.view, animated: true)
@@ -58,7 +60,7 @@ class LoginViewController: UIViewController {
             }else{
                 self.present(Utils.createAlert(message: Constants.JSON.unknownError), animated: true, completion: nil)
             }
-        }  */
+        } */
     }
     
     

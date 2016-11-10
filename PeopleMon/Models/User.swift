@@ -143,12 +143,38 @@ class User : NetworkModel {
         
         var params: [String: AnyObject] = [:]
         params[Constants.User.UserId] = UserId as AnyObject?
+        params[Constants.User.UserName] = UserName as AnyObject?
         params[Constants.User.AvatarBase64] = AvatarBase64 as AnyObject?
-        
+        params[Constants.User.Longitude] = Longitude as AnyObject?
+        params[Constants.User.Latitude] = Latitude as AnyObject?
+        params[Constants.User.Created] = Created as AnyObject?
         
         switch requestType {
+        case .CheckIn:
+            params[Constants.User.Longitude] = Longitude as AnyObject?
+            params[Constants.User.Latitude] = Latitude as AnyObject?
+        case .Catch:
+            params[Constants.User.CaughtUserId] = CaughtUserId as AnyObject?
+            params[Constants.User.RadiusInMeters] = RadiusInMeters as AnyObject?
+        case .Caught:
+            params[Constants.User.UserId] = UserId as AnyObject?
+            params[Constants.User.UserName] = UserName as AnyObject?
+            params[Constants.User.Created] = Created as AnyObject?
+            params[Constants.User.AvatarBase64] = AvatarBase64 as AnyObject?
         case .Conversations:
+            params[Constants.User.ConversationId] = ConversationId as AnyObject?
+            params[Constants.User.RecipientId] = RecipientId as AnyObject?
+            params[Constants.User.RecipientName] = RecipientName as AnyObject?
             params[Constants.User.LastMessage] = LastMessage as AnyObject?
+            params[Constants.User.Created] = Created as AnyObject?
+            params[Constants.User.MessageCount] = MessageCount as AnyObject?
+            params[Constants.User.AvatarBase64] = AvatarBase64 as AnyObject?
+            params[Constants.User.SenderId] = SenderId as AnyObject?
+            params[Constants.User.SenderName] = SenderName as AnyObject?
+        case .Conversation:
+            params[Constants.User.RecipientId] = RecipientId as AnyObject?
+            params[Constants.User.Message] = Message as AnyObject?
+        
         default:
             break
         }

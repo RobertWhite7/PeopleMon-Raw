@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="eUX-uo-EPB" kind="relationship" relationship="rootViewController" id="1iT-Vj-d3F"/>
+                        <segue destination="eUX-uo-EPB" kind="relationship" relationship="rootViewController" id="3SB-4T-AUw"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LhU-Oi-CON" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -28,7 +28,7 @@
         <!--Login View Controller-->
         <scene sceneID="CxL-Ot-edx">
             <objects>
-                <viewController id="eUX-uo-EPB" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController id="eUX-uo-EPB" customClass="LoginViewController" customModule="PeopleMon" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gvw-t0-zkP"/>
                         <viewControllerLayoutGuide type="bottom" id="rV2-OD-N9c"/>
@@ -61,7 +61,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
-                                    <segue destination="J0F-zi-Gng" kind="show" id="6ov-Bv-Ht4"/>
+                                    <segue destination="J0F-zi-Gng" kind="show" id="tc2-6T-VDt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -122,14 +122,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="confirmTextField" destination="bPd-md-P6S" id="V7d-U0-9Td"/>
-                        <outlet property="passwordTextField" destination="cAU-Pt-77E" id="oUC-EZ-h4r"/>
-                        <outlet property="usernameTextField" destination="3iI-h2-J1w" id="g8d-rM-Hq8"/>
+                        <outlet property="confirmTextField" destination="bPd-md-P6S" id="KBb-j3-aWq"/>
+                        <outlet property="emailTextField" destination="zhj-HC-fSJ" id="q0o-Ta-3cb"/>
+                        <outlet property="passwordTextField" destination="cAU-Pt-77E" id="csS-uH-CwO"/>
+                        <outlet property="usernameTextField" destination="3iI-h2-J1w" id="oWo-PW-pzf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gjw-hW-vCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754.39999999999998" y="111.99400299850076"/>
+            <point key="canvasLocation" x="778" y="116"/>
         </scene>
     </scenes>
 </document>

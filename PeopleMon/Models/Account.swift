@@ -114,13 +114,31 @@ class Account : NetworkModel {
     func toDictionary() -> [String: AnyObject]? {
         
         var params: [String: AnyObject] = [:]
+        params[Constants.Account.Id] = Id as AnyObject?
+        params[Constants.Account.Email] = Email as AnyObject?
+        params[Constants.Account.HasRegistered] = HasRegistered as AnyObject?
+        params[Constants.Account.LoginProvider] = LoginProvider as AnyObject?
         params[Constants.Account.FullName] = FullName as AnyObject?
         params[Constants.Account.AvatarBase64] = AvatarBase64 as AnyObject?
-        
-        
+        params[Constants.Account.LastCheckInLongitude] = LastCheckInLongitude as AnyObject?
+        params[Constants.Account.LastCheckInLatitude] = LastCheckInLatitude as AnyObject?
+        params[Constants.Account.LastCheckInDateTime] = LastCheckInDateTime as AnyObject?
+        params[Constants.Account.OldPassword] = OldPassword as AnyObject?
+        params[Constants.Account.NewPassword] = NewPassword as AnyObject?
+        params[Constants.Account.ConfirmPassword] = ConfirmPassword as AnyObject?
+        params[Constants.Account.ApiKey] = ApiKey as AnyObject?
         switch requestType {
-        case .register:
+        case .userinfo:
+            params[Constants.Account.FullName] = FullName as AnyObject?
+            params[Constants.Account.AvatarBase64] = AvatarBase64 as AnyObject?
+        case .changePassword:
+            params[Constants.Account.OldPassword] = OldPassword as AnyObject?
             params[Constants.Account.NewPassword] = NewPassword as AnyObject?
+            params[Constants.Account.ConfirmPassword] = ConfirmPassword as AnyObject?
+        case .setPassword:
+            params[Constants.Account.NewPassword] = NewPassword as AnyObject?
+        case .register:
+            params[Constants.Account.ApiKey] = ApiKey as AnyObject?
         default:
             break
         }
