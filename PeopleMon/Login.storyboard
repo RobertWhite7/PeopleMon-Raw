@@ -84,7 +84,7 @@
         <!--Title-->
         <scene sceneID="8YK-GF-rMt">
             <objects>
-                <viewController id="rnZ-Fv-LKq" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController id="rnZ-Fv-LKq" customClass="MapViewController" customModule="PeopleMon" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fU2-3y-kUa"/>
                         <viewControllerLayoutGuide type="bottom" id="YRU-qf-oDz"/>
@@ -94,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bkS-Nm-M0f">
-                                <rect key="frame" x="0.0" y="99" width="375" height="568"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2jD-cm-qkv">
@@ -116,10 +116,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="theMap" destination="bkS-Nm-M0f" id="Shw-1V-spA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yu-vS-4wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966" y="116"/>
+            <point key="canvasLocation" x="852" y="116"/>
         </scene>
         <!--Title-->
         <scene sceneID="mVZ-Wr-GxJ">
@@ -247,7 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gjw-hW-vCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="876"/>
+            <point key="canvasLocation" x="36" y="799"/>
         </scene>
     </scenes>
 </document>
