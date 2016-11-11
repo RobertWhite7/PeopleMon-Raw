@@ -18,7 +18,7 @@ class RegisterViewController: UIViewController {
  
     @IBOutlet weak var passwordField: UITextField!
     
-    @IBOutlet weak var confirmField: UITextField!
+  //  @IBOutlet weak var confirmField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,7 +32,7 @@ class RegisterViewController: UIViewController {
     }
     @IBAction func registerTapped(_ sender: UIButton){
         // Validate user input
-        guard let username = usernameField.text , username != "" else {
+        guard let fullname = usernameField.text , fullname != "" else {
             // show error
             let alert = Utils.createAlert("Login error", message: "Please provide a username", dismissButtonTitle: "Close")
             present(alert, animated: true, completion: nil)
@@ -46,26 +46,27 @@ class RegisterViewController: UIViewController {
             return
         }
         
-        guard let confirm = confirmField.text , password == confirm else {
-            // show error
-            let alert = Utils.createAlert("Login error", message: "Passwords do no match", dismissButtonTitle: "Close")
-            present(alert, animated: true, completion: nil)
-            return
-        }
-        
-     
        guard let email = emailField.text , email != "" else {
             // show error
             let alert = Utils.createAlert("Login error", message: "Please provide an email", dismissButtonTitle: "Close")
             present(alert, animated: true, completion: nil)
             return
         }
+        
+  /*      guard let confirm = confirmField.text , password == confirm else {
+            // show error
+            let alert = Utils.createAlert("Login error", message: "Passwords do no match", dismissButtonTitle: "Close")
+            present(alert, animated: true, completion: nil)
+            return
+        }
+         */
+
         // Going to go ahead with the register
         MBProgressHUD.showAdded(to: view, animated: true)
         
-  //      let user = user(Fullname: FullName, password: password, email: email)
+       let user = Account(Email: email, fullname: fullname, password: password)
         
-  /*      UserStore.shared.register(user) { (success, error) in
+          UserStore.shared.register(user) { (success, error) in
             MBProgressHUD.hide(for: self.view, animated: true)
             
             if success {
@@ -75,7 +76,7 @@ class RegisterViewController: UIViewController {
             }else{
                 self.present(Utils.createAlert(message: Constants.JSON.unknownError), animated: true, completion: nil)
             }
-        } */
+        }
     }
     
     

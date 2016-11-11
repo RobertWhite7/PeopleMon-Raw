@@ -14,22 +14,15 @@ struct Constants {
     
     
     // Step 7: Add keychain strings
-    public static let keychainIdentifier = "EFABKeychain"
+    public static let keychainIdentifier = "PeoplemonKeychain"
     public static let authTokenExpireDate = "authTokenExpireDate"
     public static let authToken = "authToken"
+    public static let token = "access_token"
+    public let grantType = "grant_type"
+    public static let apiKey = "iOS301november2016"
     
-    static let apiKey = "iOS301november2016"
     
-    
-    
-    // MARK: Test Model
-    struct Test {
-        static let userId = "userId"
-        static let id = "id"
-        static let title = "title"
-        static let body = "body"
-        
-    }
+
     
     // Step 4: JSON Constants
     struct JSON {
@@ -44,17 +37,17 @@ struct Constants {
         static let Email = "Email"
         static let HasRegistered = "HasRegistered"
         static let LoginProvider = "LoginProvider"
-        static let FullName = "FullName"
+        static let fullname = "FullName"
         static let AvatarBase64 = "AvatarBase64"
         static let LastCheckInLongitude = "LastCheckInLongitude"
         static let LastCheckInLatitude = "LastCheckInLatitdue"
         static let LastCheckInDateTime = "LastCheckInDateTime"
-        
-        static let OldPassword = "OldPassword"
-        static let NewPassword = "NewPassword"
-        static let ConfirmPassword = "ConfirmPassword"
-        
         static let ApiKey = "ApiKey"
+        static let password = "password"
+        static let token = "access_token"
+        static let grantType = "grant_type"
+        static let expiration = ".expires"
+        static let username = "userName"
     }
     
     struct User {

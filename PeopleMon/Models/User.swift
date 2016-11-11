@@ -46,8 +46,7 @@ class User : NetworkModel {
         case CheckIn
         case Catch
         case Caught
-        case Conversations
-        case Conversation
+       
     }
     var requestType = RequestType.Nearby
     
@@ -98,7 +97,7 @@ class User : NetworkModel {
         requestType = .Caught
     }
     
-    init(ConversationId: Int, RecipientId: String, RecipientName: String, LastMessage: String, Created: String, MessageCount: Int, AvatarBase64: String, SenderId: String, SenderName: String, RecipientAvatarBase64: String){
+ /*   init(ConversationId: Int, RecipientId: String, RecipientName: String, LastMessage: String, Created: String, MessageCount: Int, AvatarBase64: String, SenderId: String, SenderName: String, RecipientAvatarBase64: String){
         self.ConversationId = ConversationId
         self.RecipientId = RecipientId
         self.RecipientName = RecipientName
@@ -108,7 +107,7 @@ class User : NetworkModel {
         self.AvatarBase64 = AvatarBase64
         self.SenderId = SenderId
         self.SenderName = SenderName
-    }
+    } */
   
     
     func method() -> Alamofire.HTTPMethod {
@@ -124,68 +123,40 @@ class User : NetworkModel {
     func path() -> String {
         switch requestType {
         case .Nearby:
-            return "/User/Nearby"
+            return "/api/User/Nearby"
         case .CheckIn:
-            return "/User/CheckIn"
+            return "/api/User/CheckIn"
         case .Catch:
-            return "/User/Catch"
+            return "/api/User/Catch"
         case .Caught:
-            return "/User/Caught"
-        case .Conversations:
+            return "/api/User/Caught"
+   /*     case .Conversations:
             return "/User/Conversations"
         case .Conversation:
-            return "/User/Conversation"
+            return "/User/Conversation" */
         }
     }
     
     // Demo object isn't being posted to a server, so just return nil
     func toDictionary() -> [String: AnyObject]? {
-        
         var params: [String: AnyObject] = [:]
-        params[Constants.User.UserId] = UserId as AnyObject?
-        params[Constants.User.UserName] = UserName as AnyObject?
-        params[Constants.User.AvatarBase64] = AvatarBase64 as AnyObject?
-        params[Constants.User.Longitude] = Longitude as AnyObject?
-        params[Constants.User.Latitude] = Latitude as AnyObject?
-        params[Constants.User.Created] = Created as AnyObject?
         
         switch requestType {
+        case .Nearby:
+            params[Constants.User.RadiusInMeters] = RadiusInMeters as AnyObject?
         case .CheckIn:
             params[Constants.User.Longitude] = Longitude as AnyObject?
             params[Constants.User.Latitude] = Latitude as AnyObject?
         case .Catch:
-            params[Constants.User.CaughtUserId] = CaughtUserId as AnyObject?
+            params[Constants.User.CaughtUserId] = UserId as AnyObject?
             params[Constants.User.RadiusInMeters] = RadiusInMeters as AnyObject?
         case .Caught:
-            params[Constants.User.UserId] = UserId as AnyObject?
-            params[Constants.User.UserName] = UserName as AnyObject?
-            params[Constants.User.Created] = Created as AnyObject?
-            params[Constants.User.AvatarBase64] = AvatarBase64 as AnyObject?
-        case .Conversations:
-            params[Constants.User.ConversationId] = ConversationId as AnyObject?
-            params[Constants.User.RecipientId] = RecipientId as AnyObject?
-            params[Constants.User.RecipientName] = RecipientName as AnyObject?
-            params[Constants.User.LastMessage] = LastMessage as AnyObject?
-            params[Constants.User.Created] = Created as AnyObject?
-            params[Constants.User.MessageCount] = MessageCount as AnyObject?
-            params[Constants.User.AvatarBase64] = AvatarBase64 as AnyObject?
-            params[Constants.User.SenderId] = SenderId as AnyObject?
-            params[Constants.User.SenderName] = SenderName as AnyObject?
-        case .Conversation:
-            params[Constants.User.RecipientId] = RecipientId as AnyObject?
-            params[Constants.User.Message] = Message as AnyObject?
-        
-        default:
             break
         }
-        
         return params
     }
-    func description() -> String {
-        var text = ""
-        text += "title: \(UserId ?? "")\n"
-        text += "body: \(UserName ?? "")\n"
-        return text
-    }
+        
+   
+
 }
 

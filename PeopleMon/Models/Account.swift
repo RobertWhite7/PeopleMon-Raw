@@ -29,67 +29,81 @@ class Account : NetworkModel {
     var Email : String?
     var HasRegistered : Bool?
     var LoginProvider : String?
-    var FullName : String?
+    var fullname : String?
     var AvatarBase64 : String?
-    var LastCheckInLongitude : Int?
-    var LastCheckInLatitude : Int?
+    var LastCheckInLongitude : Double?
+    var LastCheckInLatitude : Double?
     var LastCheckInDateTime : String?
-    
+    var token: String?
     var OldPassword : String?
     var NewPassword : String?
     var ConfirmPassword : String?
-    
+    var authTokenExpireDate: String?
     var ApiKey : String?
+    var password : String?
+    var username : String?
+    var expiration : String?
     
     enum RequestType {
-        case userinfo
-        case changePassword
-        case setPassword
+   
         case register
+        case login
+        case updateProfile
+        case userInfo
+        case logout
     }
-    var requestType = RequestType.userinfo
     
-    required init() {}
+    
+    var requestType = RequestType.userInfo
+    
+    required init() {
+    requestType = .userInfo
+    }
     
     required init(json: JSON) throws {
         Id = try? json.getString(at: Constants.Account.Id)
         Email = try? json.getString(at: Constants.Account.Email)
         HasRegistered = try? json.getBool(at: Constants.Account.HasRegistered)
         LoginProvider = try? json.getString(at: Constants.Account.LoginProvider)
-        FullName = try? json.getString(at: Constants.Account.FullName)
+        fullname = try? json.getString(at: Constants.Account.fullname)
         AvatarBase64 = try? json.getString(at: Constants.Account.AvatarBase64)
-        LastCheckInLongitude = try? json.getInt(at: Constants.Account.LastCheckInLongitude)
-        LastCheckInLatitude = try? json.getInt(at: Constants.Account.LastCheckInLatitude)
+        LastCheckInLongitude = try? json.getDouble(at: Constants.Account.LastCheckInLongitude)
+        LastCheckInLatitude = try? json.getDouble(at: Constants.Account.LastCheckInLatitude)
         LastCheckInDateTime = try? json.getString(at: Constants.Account.LastCheckInDateTime)
+        username = try? json.getString(at: Constants.Account.username)
+        expiration = try? json.getString(at: Constants.Account.expiration)
+       
+      
+    }
+        init(Email: String, password: String){
+        self.Email = Email
+        self.password = password
+        requestType = .login
     }
     
-    init(FullName: String, AvatarBase64: String) {
-        self.FullName = FullName
-        self.AvatarBase64 = AvatarBase64
-        requestType = .userinfo
-    }
-    
-    init(OldPassword: String, NewPassword: String, ConfirmPassword: String) {
-        self.OldPassword = OldPassword
-        self.NewPassword = NewPassword
-        self.ConfirmPassword = ConfirmPassword
-        requestType = .changePassword
-    }
-    init(NewPassword: String){
-        self.NewPassword = NewPassword
-        requestType = .setPassword
-}
-    init(Email: String, Fullname: String, AvatarBase64:String, ApiKey: String, Password: String) {
-        self.ApiKey = ApiKey
+ 
+
+    init(Email: String, fullname: String, password: String) {
+        self.Email = Email
+        self.fullname = fullname
+        self.password = password
+        self.ApiKey = Constants.apiKey
         requestType = .register
     }
+    
+    init(fullName: String, AvatarBase64: String) {
+        self.fullname = fullName
+        self.AvatarBase64 = AvatarBase64
+        requestType = .updateProfile
+    }
+    
     init(id: String) {
         self.Id = id
     }
     
     func method() -> Alamofire.HTTPMethod {
         switch requestType {
-        case .userinfo:
+        case .userInfo:
             return .get
         default:
             return .post
@@ -98,48 +112,37 @@ class Account : NetworkModel {
     
     func path() -> String {
         switch requestType {
-        case .userinfo:
-            return "/UserInfo"
-        case .changePassword:
-            return "/ChangePassword"
-        case .setPassword:
-            return "/SetPassword"
+      
+        case .login:
+            return "/token"
+        case .logout:
+            return "/api/Account/Logout"
         case .register:
-            return "/Register"
+            return "/api/Account/Register"
+        case .userInfo, .updateProfile:
+            return "/api/Account/UserInfo"
             
         }
     }
     
-    // Demo object isn't being posted to a server, so just return nil
     func toDictionary() -> [String: AnyObject]? {
-        
         var params: [String: AnyObject] = [:]
-        params[Constants.Account.Id] = Id as AnyObject?
-        params[Constants.Account.Email] = Email as AnyObject?
-        params[Constants.Account.HasRegistered] = HasRegistered as AnyObject?
-        params[Constants.Account.LoginProvider] = LoginProvider as AnyObject?
-        params[Constants.Account.FullName] = FullName as AnyObject?
-        params[Constants.Account.AvatarBase64] = AvatarBase64 as AnyObject?
-        params[Constants.Account.LastCheckInLongitude] = LastCheckInLongitude as AnyObject?
-        params[Constants.Account.LastCheckInLatitude] = LastCheckInLatitude as AnyObject?
-        params[Constants.Account.LastCheckInDateTime] = LastCheckInDateTime as AnyObject?
-        params[Constants.Account.OldPassword] = OldPassword as AnyObject?
-        params[Constants.Account.NewPassword] = NewPassword as AnyObject?
-        params[Constants.Account.ConfirmPassword] = ConfirmPassword as AnyObject?
-        params[Constants.Account.ApiKey] = ApiKey as AnyObject?
+        
         switch requestType {
-        case .userinfo:
-            params[Constants.Account.FullName] = FullName as AnyObject?
-            params[Constants.Account.AvatarBase64] = AvatarBase64 as AnyObject?
-        case .changePassword:
-            params[Constants.Account.OldPassword] = OldPassword as AnyObject?
-            params[Constants.Account.NewPassword] = NewPassword as AnyObject?
-            params[Constants.Account.ConfirmPassword] = ConfirmPassword as AnyObject?
-        case .setPassword:
-            params[Constants.Account.NewPassword] = NewPassword as AnyObject?
         case .register:
-            params[Constants.Account.ApiKey] = ApiKey as AnyObject?
-       
+            params[Constants.Account.Email] = Email as AnyObject?
+            params[Constants.Account.fullname] = fullname as AnyObject?
+            params[Constants.Account.ApiKey] = self.ApiKey as AnyObject?
+            params[Constants.Account.password] = password as AnyObject?
+        case .login:
+            params[Constants.Account.grantType] = Constants.Account.password as AnyObject?
+            params[Constants.Account.username] = Email as AnyObject?
+            params[Constants.Account.password] = password as AnyObject?
+           
+        case .updateProfile:
+            params[Constants.Account.fullname] = fullname as AnyObject?
+            params[Constants.Account.AvatarBase64] = AvatarBase64 as AnyObject?
+        default:
             break
         }
         
