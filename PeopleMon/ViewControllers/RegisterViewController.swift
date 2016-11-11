@@ -12,15 +12,13 @@ import MBProgressHUD
 
 class RegisterViewController: UIViewController {
     
-    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var usernameField: UITextField!
 
-    @IBOutlet weak var passwordTextField: UITextField!
-
-    @IBOutlet weak var confirmTextField: UITextField!
-
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
  
+    @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var confirmField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,21 +32,21 @@ class RegisterViewController: UIViewController {
     }
     @IBAction func registerTapped(_ sender: UIButton){
         // Validate user input
-        guard let username = usernameTextField.text , username != "" else {
+        guard let username = usernameField.text , username != "" else {
             // show error
             let alert = Utils.createAlert("Login error", message: "Please provide a username", dismissButtonTitle: "Close")
             present(alert, animated: true, completion: nil)
             return
         }
         
-        guard let password = passwordTextField.text , password != "" else {
+        guard let password = passwordField.text , password != "" else {
             // show error
             let alert = Utils.createAlert("Login error", message: "Please provide a password", dismissButtonTitle: "Close")
             present(alert, animated: true, completion: nil)
             return
         }
         
-        guard let confirm = confirmTextField.text , password == confirm else {
+        guard let confirm = confirmField.text , password == confirm else {
             // show error
             let alert = Utils.createAlert("Login error", message: "Passwords do no match", dismissButtonTitle: "Close")
             present(alert, animated: true, completion: nil)
@@ -56,7 +54,7 @@ class RegisterViewController: UIViewController {
         }
         
      
-       guard let email = emailTextField.text , email != "" else {
+       guard let email = emailField.text , email != "" else {
             // show error
             let alert = Utils.createAlert("Login error", message: "Please provide an email", dismissButtonTitle: "Close")
             present(alert, animated: true, completion: nil)

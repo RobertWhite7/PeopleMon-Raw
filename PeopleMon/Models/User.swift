@@ -181,5 +181,11 @@ class User : NetworkModel {
         
         return params
     }
-    
+    func description() -> String {
+        var text = ""
+        text += "title: \(UserId ?? "")\n"
+        text += "body: \(UserName ?? "")\n"
+        return text
+    }
 }
+
