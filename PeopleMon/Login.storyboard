@@ -103,11 +103,6 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="PeopleMonMap" id="Yhm-Er-rwG">
-                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="nne-j3-RYz">
-                                            <connections>
-                                                <action selector="logoutWithSender:" destination="rnZ-Fv-LKq" id="YKk-8K-lnz"/>
-                                            </connections>
-                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Profile" id="Flz-ey-T4k"/>
                                     </navigationItem>
                                 </items>
@@ -264,7 +259,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="82"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y83-Wf-n0s" id="mCm-Pr-Pir">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="81.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcs-3T-wVw">
