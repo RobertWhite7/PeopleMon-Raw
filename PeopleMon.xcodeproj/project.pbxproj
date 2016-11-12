@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26F4C5711DD76717004393A6 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F4C5701DD76717004393A6 /* MapPin.swift */; };
+		26F4C5731DD7675A004393A6 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F4C5721DD7675A004393A6 /* CircleImage.swift */; };
+		26F4C5751DD76B41004393A6 /* CaughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F4C5741DD76B41004393A6 /* CaughtViewController.swift */; };
+		26F4C5771DD77173004393A6 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F4C5761DD77173004393A6 /* SegueHandlerType.swift */; };
+		26F4C5791DD77427004393A6 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F4C5781DD77427004393A6 /* PersonCell.swift */; };
 		26F765161DD0CBEC00B7B264 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F765151DD0CBEC00B7B264 /* AppDelegate.swift */; };
 		26F765181DD0CBEC00B7B264 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F765171DD0CBEC00B7B264 /* ViewController.swift */; };
 		26F7651D1DD0CBEC00B7B264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26F7651C1DD0CBEC00B7B264 /* Assets.xcassets */; };
@@ -29,6 +34,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26F4C5701DD76717004393A6 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPin.swift; path = Components/MapPin.swift; sourceTree = "<group>"; };
+		26F4C5721DD7675A004393A6 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleImage.swift; path = Components/CircleImage.swift; sourceTree = "<group>"; };
+		26F4C5741DD76B41004393A6 /* CaughtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaughtViewController.swift; sourceTree = "<group>"; };
+		26F4C5761DD77173004393A6 /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
+		26F4C5781DD77427004393A6 /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		26F765121DD0CBEC00B7B264 /* PeopleMon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleMon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26F765151DD0CBEC00B7B264 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26F765171DD0CBEC00B7B264 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +127,8 @@
 			children = (
 				26F7652D1DD0D1C600B7B264 /* LoginViewController.swift */,
 				26F765511DD645FE00B7B264 /* ProfileViewController.swift */,
+				26F4C5781DD77427004393A6 /* PersonCell.swift */,
+				26F4C5741DD76B41004393A6 /* CaughtViewController.swift */,
 				26F765551DD6481300B7B264 /* MapViewController.swift */,
 				26F7652F1DD0D24600B7B264 /* RegisterViewController.swift */,
 			);
@@ -127,8 +139,11 @@
 			isa = PBXGroup;
 			children = (
 				26F765321DD0D35E00B7B264 /* UserStore.swift */,
+				26F4C5701DD76717004393A6 /* MapPin.swift */,
 				26F7653D1DD0D45C00B7B264 /* Constants.swift */,
+				26F4C5721DD7675A004393A6 /* CircleImage.swift */,
 				26F7653F1DD0D47E00B7B264 /* Utils.swift */,
+				26F4C5761DD77173004393A6 /* SegueHandlerType.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -302,12 +317,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F4C5751DD76B41004393A6 /* CaughtViewController.swift in Sources */,
 				26F765491DD0DF6C00B7B264 /* User.swift in Sources */,
+				26F4C5791DD77427004393A6 /* PersonCell.swift in Sources */,
+				26F4C5731DD7675A004393A6 /* CircleImage.swift in Sources */,
 				26F765361DD0D3B000B7B264 /* NetworkModel.swift in Sources */,
 				26F7652E1DD0D1C600B7B264 /* LoginViewController.swift in Sources */,
 				26F765331DD0D35E00B7B264 /* UserStore.swift in Sources */,
 				26F7653A1DD0D3E300B7B264 /* WebServicesExtension.swift in Sources */,
 				26F765181DD0CBEC00B7B264 /* ViewController.swift in Sources */,
+				26F4C5711DD76717004393A6 /* MapPin.swift in Sources */,
 				26F765471DD0DF4500B7B264 /* Account.swift in Sources */,
 				26F765401DD0D47E00B7B264 /* Utils.swift in Sources */,
 				26F765161DD0CBEC00B7B264 /* AppDelegate.swift in Sources */,
@@ -315,6 +334,7 @@
 				26F765521DD645FE00B7B264 /* ProfileViewController.swift in Sources */,
 				26F765301DD0D24600B7B264 /* RegisterViewController.swift in Sources */,
 				26F7653E1DD0D45C00B7B264 /* Constants.swift in Sources */,
+				26F4C5771DD77173004393A6 /* SegueHandlerType.swift in Sources */,
 				26F765561DD6481300B7B264 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

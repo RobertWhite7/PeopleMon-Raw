@@ -32,5 +32,9 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>PeopleMon would like to access your Location</string>
+	<key>NSCameraUsageDescription</key>
+	<string>PeopleMon would like to access your Camera</string>
 </dict>
 </plist>

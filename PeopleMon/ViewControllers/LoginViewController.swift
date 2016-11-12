@@ -31,14 +31,14 @@ class LoginViewController: UIViewController {
         // Validate user input
         guard let Email = usernameField.text , Email != "" else {
             // show error
-            let alert = Utils.createAlert("Login error", message: "Please provide an Email", dismissButtonTitle: "Close")
+            let alert = Utils.createAlert(title: "Login error", message: "Please provide an Email", dismissButtonTitle: "Close")
             present(alert, animated: true, completion: nil)
             return
         }
         
         guard let password = passwordField.text , password != "" else {
             // show error
-            let alert = Utils.createAlert("Login error", message: "Please provide a password", dismissButtonTitle: "Close")
+            let alert = Utils.createAlert(title: "Login error", message: "Please provide a password", dismissButtonTitle: "Close")
             present(alert, animated: true, completion: nil)
             return
         }
@@ -46,31 +46,16 @@ class LoginViewController: UIViewController {
         
         // Going to go ahead with the register
         MBProgressHUD.showAdded(to: view, animated: true)
-        
-        let user = Account(Email: Email, password: password)
-        
-        UserStore.shared.register(user) { (success, error) in
+        let user = User(email: Email, password: password)
+        UserStore.shared.login(loginUser: user) { (success, error) in
             MBProgressHUD.hide(for: self.view, animated: true)
-            
             if success {
                 self.dismiss(animated: true, completion: nil)
-            }else if let error = error {
+            } else if let error = error {
                 self.present(Utils.createAlert(message: error), animated: true, completion: nil)
-            }else{
+            } else {
                 self.present(Utils.createAlert(message: Constants.JSON.unknownError), animated: true, completion: nil)
             }
-        } 
+        }
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
