@@ -63,6 +63,7 @@ enum Images : String {
         return UIImage(named: self.rawValue)!
     }
 }
+/*
 // MARK: - Colors
 // Step 14: UIColor extension and
 extension UIColor {
@@ -80,3 +81,4 @@ struct ColorPalette {
     static let calendarTodayColor = UIColor.rgba(red: 12, green: 35, blue: 64, alpha: 0.3)
     static let calendarBorderColor = UIColor.rgba(red: 12, green: 35, blue: 64, alpha: 0.8)
 }
+*/

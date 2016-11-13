@@ -34,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2658A0721DD9005E00999119 /* Paintsville.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Paintsville.gpx; path = Components/Paintsville.gpx; sourceTree = "<group>"; };
 		26F4C5701DD76717004393A6 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPin.swift; path = Components/MapPin.swift; sourceTree = "<group>"; };
 		26F4C5721DD7675A004393A6 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleImage.swift; path = Components/CircleImage.swift; sourceTree = "<group>"; };
 		26F4C5741DD76B41004393A6 /* CaughtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaughtViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +107,7 @@
 				26F7652A1DD0D15500B7B264 /* ViewControllers */,
 				26F765291DD0CE4500B7B264 /* StoryBoards */,
 				26F765151DD0CBEC00B7B264 /* AppDelegate.swift */,
+				2658A0721DD9005E00999119 /* Paintsville.gpx */,
 				26F765171DD0CBEC00B7B264 /* ViewController.swift */,
 				26F7651C1DD0CBEC00B7B264 /* Assets.xcassets */,
 				26F7651E1DD0CBEC00B7B264 /* LaunchScreen.storyboard */,
