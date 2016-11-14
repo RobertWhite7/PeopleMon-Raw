@@ -112,18 +112,11 @@
                                                 <action selector="openNearbyViewWithSender:" destination="rnZ-Fv-LKq" id="Qjv-ps-QGP"/>
                                             </connections>
                                         </barButtonItem>
-                                        <rightBarButtonItems>
-                                            <barButtonItem title="Logout" id="Flz-ey-T4k">
-                                                <connections>
-                                                    <action selector="logoutWithSender:" destination="rnZ-Fv-LKq" id="Txw-x1-5vW"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem title="Close Nearby" id="tsG-CD-1qs">
-                                                <connections>
-                                                    <action selector="closeNearbyViewWithSender:" destination="rnZ-Fv-LKq" id="fxF-Zp-AH5"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </rightBarButtonItems>
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Flz-ey-T4k">
+                                            <connections>
+                                                <action selector="logoutWithSender:" destination="rnZ-Fv-LKq" id="Txw-x1-5vW"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
