@@ -132,7 +132,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="PeopleMon Map" id="nEr-O4-768">
-                        <barButtonItem key="leftBarButtonItem" title="Caught" id="enp-3O-024"/>
+                        <barButtonItem key="leftBarButtonItem" title="Caught" id="enp-3O-024">
+                            <connections>
+                                <segue destination="xQM-U6-HKh" kind="show" id="00r-ao-E80"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Profile" id="5Qh-tc-nMn">
                             <connections>
                                 <segue destination="6FQ-Uw-2ms" kind="show" id="nwj-cZ-oIz"/>
