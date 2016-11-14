@@ -60,7 +60,7 @@
                                 </state>
                                 <connections>
                                     <action selector="LoginTapped:" destination="eUX-uo-EPB" eventType="touchUpInside" id="0t5-MV-M9A"/>
-                                    <segue destination="rnZ-Fv-LKq" kind="show" identifier="PresentLoginNoAnimation" animates="NO" id="6Xp-sO-o4C"/>
+                                    <segue destination="rnZ-Fv-LKq" kind="show" identifier="PresentLoginNoAnimation" animates="NO" id="ine-Ol-0zl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kf1-bp-HAG">
@@ -181,7 +181,7 @@
                     <navigationItem key="navigationItem" title="User Profile" id="8GP-FI-qWt">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="hpH-Lv-xRB">
                             <connections>
-                                <segue destination="rnZ-Fv-LKq" kind="show" id="KJB-Q2-5K4"/>
+                                <segue destination="rnZ-Fv-LKq" kind="show" identifier="" id="KJB-Q2-5K4"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
@@ -313,6 +313,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6Xp-sO-o4C"/>
+        <segue reference="KJB-Q2-5K4"/>
     </inferredMetricsTieBreakers>
 </document>
