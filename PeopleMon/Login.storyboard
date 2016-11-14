@@ -112,11 +112,6 @@
                                                 <action selector="openNearbyViewWithSender:" destination="rnZ-Fv-LKq" id="Qjv-ps-QGP"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Flz-ey-T4k">
-                                            <connections>
-                                                <action selector="logoutWithSender:" destination="rnZ-Fv-LKq" id="Txw-x1-5vW"/>
-                                            </connections>
-                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
