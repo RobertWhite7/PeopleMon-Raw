@@ -256,7 +256,7 @@ extension MapViewController: MKMapViewDelegate {
         
         return pinView
     }
-    
+ 
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         if let mapPin = view.annotation as? MapPin, let person = mapPin.person, let name = person.username, let userId = person.userId {
             let alert = UIAlertController(title: "Catch User", message: "Catch \(name)?", preferredStyle: .alert)

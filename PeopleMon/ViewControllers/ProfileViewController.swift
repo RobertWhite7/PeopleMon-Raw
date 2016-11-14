@@ -25,7 +25,7 @@ class ProfileViewController: UIViewController {
             } else {
                 avatar.image = Images.Avatar.image()
             }
-            avatar.setupView(size: 80)
+       //     avatar.setupView(size: 80)
         }
     }
     
