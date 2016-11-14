@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2658A0741DD9807900999119 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A0731DD9807900999119 /* PersonCell.swift */; };
 		26F4C5711DD76717004393A6 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F4C5701DD76717004393A6 /* MapPin.swift */; };
 		26F4C5731DD7675A004393A6 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F4C5721DD7675A004393A6 /* CircleImage.swift */; };
 		26F4C5751DD76B41004393A6 /* CaughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F4C5741DD76B41004393A6 /* CaughtViewController.swift */; };
 		26F4C5771DD77173004393A6 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F4C5761DD77173004393A6 /* SegueHandlerType.swift */; };
-		26F4C5791DD77427004393A6 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F4C5781DD77427004393A6 /* PersonCell.swift */; };
 		26F765161DD0CBEC00B7B264 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F765151DD0CBEC00B7B264 /* AppDelegate.swift */; };
 		26F765181DD0CBEC00B7B264 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F765171DD0CBEC00B7B264 /* ViewController.swift */; };
 		26F7651D1DD0CBEC00B7B264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26F7651C1DD0CBEC00B7B264 /* Assets.xcassets */; };
@@ -35,11 +35,11 @@
 
 /* Begin PBXFileReference section */
 		2658A0721DD9005E00999119 /* Paintsville.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Paintsville.gpx; path = Components/Paintsville.gpx; sourceTree = "<group>"; };
+		2658A0731DD9807900999119 /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonCell.swift; path = Components/PersonCell.swift; sourceTree = "<group>"; };
 		26F4C5701DD76717004393A6 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPin.swift; path = Components/MapPin.swift; sourceTree = "<group>"; };
 		26F4C5721DD7675A004393A6 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleImage.swift; path = Components/CircleImage.swift; sourceTree = "<group>"; };
 		26F4C5741DD76B41004393A6 /* CaughtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaughtViewController.swift; sourceTree = "<group>"; };
 		26F4C5761DD77173004393A6 /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
-		26F4C5781DD77427004393A6 /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		26F765121DD0CBEC00B7B264 /* PeopleMon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleMon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26F765151DD0CBEC00B7B264 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26F765171DD0CBEC00B7B264 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,8 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				26F7652D1DD0D1C600B7B264 /* LoginViewController.swift */,
+				2658A0731DD9807900999119 /* PersonCell.swift */,
 				26F765511DD645FE00B7B264 /* ProfileViewController.swift */,
-				26F4C5781DD77427004393A6 /* PersonCell.swift */,
 				26F4C5741DD76B41004393A6 /* CaughtViewController.swift */,
 				26F765551DD6481300B7B264 /* MapViewController.swift */,
 				26F7652F1DD0D24600B7B264 /* RegisterViewController.swift */,
@@ -321,7 +321,7 @@
 			files = (
 				26F4C5751DD76B41004393A6 /* CaughtViewController.swift in Sources */,
 				26F765491DD0DF6C00B7B264 /* User.swift in Sources */,
-				26F4C5791DD77427004393A6 /* PersonCell.swift in Sources */,
+				2658A0741DD9807900999119 /* PersonCell.swift in Sources */,
 				26F4C5731DD7675A004393A6 /* CircleImage.swift in Sources */,
 				26F765361DD0D3B000B7B264 /* NetworkModel.swift in Sources */,
 				26F7652E1DD0D1C600B7B264 /* LoginViewController.swift in Sources */,
